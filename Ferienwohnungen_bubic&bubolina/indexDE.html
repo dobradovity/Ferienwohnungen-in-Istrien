@@ -1,0 +1,800 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>APARTMANI Bubić & Bubolina</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
+	<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
+	<meta name="author" content="FREEHTML5.CO" />
+
+ 
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	
+	
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" type="image/png" href="images/bed.png">
+
+	<!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'> -->
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<!-- Superfish -->
+	<link rel="stylesheet" href="css/superfish.css">
+
+	<link rel="stylesheet" href="css/style.css">
+
+<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+
+
+<!--##### moved text in header ####### start-->
+	<script>
+		var TxtRotate = function(el, toRotate, period) {
+	  this.toRotate = toRotate;
+	  this.el = el;
+	  this.loopNum = 0;
+	  this.period = parseInt(period, 10) || 2000;
+	  this.txt = '';
+	  this.tick();
+	  this.isDeleting = false;
+	};
+
+	TxtRotate.prototype.tick = function() {
+	  var i = this.loopNum % this.toRotate.length;
+	  var fullTxt = this.toRotate[i];
+
+	  if (this.isDeleting) {
+	    this.txt = fullTxt.substring(0, this.txt.length - 1);
+	  } else {
+	    this.txt = fullTxt.substring(0, this.txt.length + 1);
+	  }
+
+	  this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+	  var that = this;
+	  var delta = 300 - Math.random() * 100;
+
+	  if (this.isDeleting) { delta /= 2; }
+
+	  if (!this.isDeleting && this.txt === fullTxt) {
+	    delta = this.period;
+	    this.isDeleting = true;
+	  } else if (this.isDeleting && this.txt === '') {
+	    this.isDeleting = false;
+	    this.loopNum++;
+	    delta = 500;
+	  }
+
+	  setTimeout(function() {
+	    that.tick();
+	  }, delta);
+	};
+
+	window.onload = function() {
+	  var elements = document.getElementsByClassName('txt-rotate');
+	  for (var i=0; i<elements.length; i++) {
+	    var toRotate = elements[i].getAttribute('data-rotate');
+	    var period = elements[i].getAttribute('data-period');
+	    if (toRotate) {
+	      new TxtRotate(elements[i], JSON.parse(toRotate), period);
+	    }
+	  }
+	  // INJECT CSS
+	  var css = document.createElement("style");
+	  css.type = "text/css";
+	  css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
+	  document.body.appendChild(css);
+	};
+	</script>
+
+<!--##### moved text in header ####### end-->
+
+	
+	<style>
+
+	
+/*button 3D shadow*/
+	.flatbutton {
+	  background: #4285f4;
+	  color: #fff;
+	  padding: 5px 10px;
+	  width: 120px;
+	  height: 60px;
+	  display: inline-block;
+	  border-radius: 5px;
+	  box-shadow: 0 17px 10px -10px rgba(0, 0, 0, 0.4);
+	  transition: ease-in 0.3s; 
+	}
+	.flatbutton:hover {
+	  box-shadow: 0px 37px 20px -10px rgba(0,0,0,0.2);
+	  transform: translate(0px, -10px);
+	}
+
+	.flatbutton1 {
+	  background: #50AE54;
+	  color: #fff;
+	  padding: 5px 10px;
+	   width: 200px;
+	  height: 60px;
+	  display: inline-block;
+	  border-radius: 5px;
+	  box-shadow: 0 17px 10px -10px rgba(0, 0, 0, 0.4);
+	  transition: ease-in 0.3s; 
+	}
+	.flatbutton1:hover {
+	  box-shadow: 0px 37px 20px -20px rgba(0,0,0,0.2);
+	  transform: translate(0px, -10px);
+	}
+/* button 3D shadow ende*/	
+
+	h1,h2 {
+		font-weight: 200;
+		margin: 0.4em 0;
+		color: white;
+		
+	}
+	h1 { 
+	    font-size: 3.5em; 
+	}
+	h2 {
+	    color: #888;
+	    font-size: 2em;
+	}
+	#headerText{
+		text-shadow: 2px 3px gray;
+
+
+	}
+/* googleMaps dodatni style START*/
+	#map {
+            height: 500px;
+            width: 80%;
+            border-radius: 5px 5px 5px 5px;
+            margin-left: 10%;
+            margin-right: 10%;
+    }
+
+    #map{
+      transition: .8s;
+      background-color: rgba(0, 0, 0, .5);
+      border-color:#006; 
+      
+      border-left: none;
+      border-top: none;
+      border-width: 13px;
+      box-shadow: 0 27px 10px -10px rgba(0, 0, 0, 0.4);
+
+	}
+   
+   
+
+    @media screen and (max-width: 750px){
+      .formulario{
+        width: 85%;
+        margin-top: 10px;
+
+      }}
+/* googleMaps dodatni style END*/
+
+
+
+/*fullSize start*/
+	#imgFullSize{
+		margin: 5px 2px 5px 2px;
+	}
+
+
+	#icons{
+		margin: 4% 4% 4% 4%;
+		width: 10%;
+		height: 10%;	
+	}
+	#icons:hover{
+		
+  transform: translate(0px, -10px);
+  transition: ease-in 0.3s; 
+	}
+
+	.openBtn {
+	    
+	    border: none;
+	   	cursor: pointer;
+	}
+
+	.openBtn:hover {
+	    background: lightgray;
+	}
+
+	.overlay {
+		background-color: lightgray;
+	    height: 90%;
+	    width: 90%;
+	    display: none;
+	    position: fixed;
+	    z-index: 1;
+	    top: 10px;
+	    left: 20px;
+	    background-image: url('https://www.planwallpaper.com/static/images/3D-Beach-Wallpaper-HD-Download.jpg');
+	    background-size: 80% 60%;
+	    background-repeat: no-repeat;
+	    background-position: center;
+	}
+
+	.overlay-content {
+	    position: relative;
+	    top: 46%;
+	    width: 80%;
+	    text-align: center;
+	    margin-top: 30px;
+	    margin: auto;
+	}
+
+	.overlay .closebtn {
+	    position: absolute;
+	    top: 20px;
+	    right: 45px;
+	    font-size: 60px;
+	    cursor: pointer;
+	    color: red;
+	}
+
+	.overlay .closebtn:hover {
+	    color: #ccc;
+	}
+
+	.overlay input[type=text] {
+	    padding: 15px;
+	    font-size: 17px;
+	    border: none;
+	    float: left;
+	    width: 80%;
+	    background: white;
+	}
+
+	.overlay input[type=text]:hover {
+	    background: #f1f1f1;
+	}
+
+	.overlay button {
+	    float: left;
+	    width: 20%;
+	    padding: 15px;
+	    background: #ddd;
+	    font-size: 17px;
+	    border: none;
+	    cursor: pointer;
+	}
+
+	.overlay button:hover {
+	    background: #bbb;
+
+	}
+/*fullSize start end*/
+
+/*clock*/
+	#clock{
+		color: #2080BC;
+		background-color:#F9B83A;
+		background-size: 100% 100%;
+		/*text-align: center;*/
+		padding-left: 30px;
+	}
+	#navbarAppartments:hover{
+		color: red;
+	}
+
+
+	</style>
+
+	</head>
+	<body>
+		<div id="fh5co-wrapper">
+			<div id="fh5co-page">
+				<div id="fh5co-header">
+					<header id="fh5co-header-section">
+						<div class="container">
+							<div class="nav-header">
+								<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+								<h1 id="fh5co-logo"><a href="indexDE.html" onmouseover="style.color='red'"
+onmouseout="style.color='#1A9BFC'">Ferienwohnungen Bubić & Bubolina</a></h1>
+
+
+								<!-- START #fh5co-menu-wrap -->
+								<nav id="fh5co-menu-wrap" role="navigation">
+									<ul class="sf-menu" id="fh5co-primary-menu">
+										<li class="active">
+											<a href="indexDE.html">Home</a>
+										</li>
+										<li>
+											<a href="index.html" class="fh5co-sub-ddown">Ferienwohnung</a>
+											<ul class="fh5co-sub-menu">
+												<li><a id="navbarAppartments" href="#fh5co-blog-section">Bubić</a></li>
+												<li><a id="navbarAppartments" href="#fh5co-blog-section">Bubolina</a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="#googleMaps">Wo wir sind</a>
+											 <!--<ul class="fh5co-sub-menu">
+											 	<li><a href="#">lorem ipsum</a></li>
+											 	<li><a href="right-sidebar.html">lorem ipsum</a></li>
+												<li>
+													<a href="#" class="fh5co-sub-ddown">lorem ipsum</a>
+													<ul class="fh5co-sub-menu">
+														<li><a href="#" target="_blank">lorem ipsum</a></li>
+														<li><a href="#" target="_blank">lorem ipsum</a></li>
+														<li><a href="#" target="_blank">lorem ipsum</a></li>
+														<li><a href="#" target="_blank">lorem ipsum</a></li>
+														<li><a href="#" target="_blank">lorem ipsum</a></li>
+														<li><a href="#" target="_blank">lorem ipsum</a></li>
+													</ul>
+												</li>
+												<li><a href="#">lorem ipsum</a></li>
+												<li><a href="#">lorem ipsum</a></li>
+												<li><a href="#">lorem ipsum</a></li> 
+											</ul>-->
+										</li>
+										<li><a href="#fh5co-content-section-aboutUs">Über uns</a></li>
+										<li><a href="#fh5co-contact">Kontakt</a>
+										</li>
+										<li>
+
+											<a href="#" class="fh5co-sub-ddown"><img src="images/Germany.png" alt=""></a>
+											<ul class="fh5co-sub-menu">
+												<li><a href="#"><img src="images/United-Kingdom.png" alt=""> english</a></li>
+												<li><a href="#"><img src="images/France.png" alt=""> français</a></li>
+												<li><a href="#"><img src="images/Italy.png" alt=""> italiano</a></li>
+												<li><a href="#"><img src="images/Sweden.png" alt=""> svenska</a></li>
+												<li><a href="#"><img src="images/Hungary.png" alt=""> magyarul</a></li>
+												<li><a href="#"><img src="images/Spain.png" alt=""> español</a></li>
+												<li><a href="index.html"><img src="images/Croatia.png" alt=""> hrvatski</a></li>
+											</ul>
+										</li>
+									</ul>
+								</nav>
+							</div>
+						</div>
+					</header>
+				</div>
+		
+
+				<div class="fh5co-hero">
+					<div class="fh5co-overlay">			
+					</div>
+					<div  class="fh5co-cover text-center" data-stellar-background-ratio="0.5" style="background-image: url(images/backgroundHeader.jpeg)";> <!--schwarzer Hintergrund images/cover_bg_1.jpg-->
+						
+						<!--##### Animated text ##### start-->
+						<div class="desc animate-box">
+							<link href="https://fonts.googleapis.com/css?family=Raleway:200,100,400" rel="stylesheet" type="text/css" />
+							<h1 id="headerText" >Verbringen Sie Ihr Urlaub
+								<span class="txt-rotate" 
+									  data-period="2000"
+									  data-rotate='[ "am Meer.", "in unberührter Natur.", "an der frischen Luft.", "bei Bubića und Buboline.", "in Mošćenička Draga!" ]'>
+								</span>
+							</h1>
+							<!--<span><a class="btn btn-primary btn-md" href="#">Get Started</a></span>-->
+
+							
+						</div>
+						<!--##### Animated text ##### end-->
+					</div>	
+				</div>
+
+
+
+				<!--WEATHER WIDGET LIVE-->
+				<div id="container">
+			  
+					<!-- Code generated at https://WeatherWidget.io -->  
+					<a class="weatherwidget-io" href="https://forecast7.com/de/45d2414d25/moscenicka-draga/" data-label_1="Mošćenička Draga" data-label_2="WETTER" data-theme="orange" >MOŠĆENIČKA DRAGA WETTER</a>
+					<div id="clock"></div>
+					<script>
+					!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://weatherwidget.io/js/widget.min.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","weatherwidget-io-js");
+					</script>
+					<!-- / Code generated at https://WeatherWidget.io --> 
+		  
+				<!-- end:header-top -->
+
+
+
+
+					<div id="fh5co-blog-section" class="fh5co-section-gray">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
+									<h3>Ferienwohnung in Mošćenička Draga</h3>
+									<p>Mošćenička Draga ist ein ruhiger Ort an der Adriaküste. Unsere Ferienwohnungen Bubić und Bubolina sind 100 m vom Meer entfernt. </p>
+								</div>
+							</div>
+						</div>
+						<div class="container">
+							<div class="row row-bottom-padded-md">
+								<div class="col-lg-6 col-md-6">
+									<div class="fh5co-blog animate-box">
+										<a href="#"><img class="img-responsive" src="images/apartmanBubic.jpeg" alt=""></a>
+
+										<div class="blog-text">
+											<div class="prod-title">
+												<h3><a href="#">Ferienwohnung Bubić</a></h3>
+												<span class="posted_by">22m<sup>2</sup></span>
+												<span class="comment"><button type="button" class="flatbutton" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">Bilder</button></span>
+												<p>Weit weg von Stadtbeton, hinter den Bergen, an unserer schönen Adria.</p>
+												<!--  <a href="#" class="btn btn-primary">BOOK</a>  -->
+											</div>
+										</div> 
+									</div>
+								</div>
+								<div class="col-lg-6 col-md-6">
+									<div class="fh5co-blog animate-box">
+										<a href="#"><img class="img-responsive" src="images/apartmanBubolina.jpeg" alt=""></a>
+										<div class="blog-text">
+											<div class="prod-title">
+												<h3><a href=""#>Ferienwohnung Bubolina</a></h3>
+												<span class="posted_by">25m<sup>2</sup></span>
+												<span class="comment"><button type="button" class="flatbutton" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal1">Bilder</button></span>
+												<p>Weit weg von Stadtbeton, hinter den Bergen, an unserer schönen Adria.</p>
+												<!--   <a href="#" class="btn btn-primary">BOOK</a>  -->
+											</div>
+										</div> 
+									</div>
+								</div>
+								
+							</div>
+
+							<div class="row">
+								
+									<p align="center"><button type="button" class="flatbutton1" class="btn btn-primary btn-md col-md-4 col-md-offset-4 text-center animate-box" data-toggle="modal" data-target="#myModal1">Strand</button></p>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+		
+		
+					<div id="fh5co-portfolio">
+						<div class="container">
+
+							<div class="row">
+								<div class="col-md-6 col-md-offset-3 text-center heading-section animate-box">
+									<h3>Umgebung</h3>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit est facilis maiores, perspiciatis accusamus asperiores sint consequuntur debitis.</p>
+								</div>
+							</div>
+
+
+							<div class="row row-bottom-padded-md">
+								<div class="col-md-12"><p align="center">
+									<a href="https://www.arriva.com.hr/de-de/kvarner/rijeka" target="blank_page"><img id="icons" src="images/frontal-bus-silhouette.png" alt=""></a>
+									<a href="http://www.hzpp.hr/en" target="blank_page"><img id="icons" src="images/locomotive.png" alt=""></a>
+									<a href="https://www.jadrolinija.hr/de/faehren-kroatien" target="blank_page"><img id="icons" src="images/boat-front-view.png" alt=""></a>
+									<a href="http://rijeka-airport.hr/de/flughafen-rijeka" target="blank_page"><img id="icons" src="images/airliner.png" alt=""></a>
+									<a href="#"><img id="icons" src="images/bicycle.png" alt=""></a></p>
+								</div>
+							</div>	
+						</div>
+					</div>
+		
+
+		
+					<div id="fh5co-content-section-aboutUs" class="fh5co-section-gray">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
+									<br><br><br><br>
+									<h3>Über uns</h3>
+									<p>Wir sind eine glückliche Familie, die seit Jahrhunderten im Familientourismus tätig ist. Unser Motto lautet: "Gib anderen immer, was du haben willst". </p>
+								</div>
+							</div>
+						</div>
+						<div class="container">
+							<div class="row">
+								<div class="col-md-4">
+									<div class="fh5co-testimonial text-center animate-box">
+										<figure>
+											<img src="images/man.png" alt="user">
+										</figure>
+										<blockquote>
+											<p>“Bubić ist der Sohn einer Kochin, der am Meer geboren und aufgewachsen ist, ein echter Gastgeber. Neben seiner kroatischen Muttersprache spricht er fließend Englisch und Italienisch.”</p>
+										</blockquote>
+										<span>Bubić Bubićković, Ihr Gastgeber </span>
+										<p> <img src="images/Croatia.png" alt=""> <img src="images/Italy.png" alt=""> <img src="images/United-Kingdom.png" alt=""></p>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="fh5co-testimonial text-center animate-box">
+										<figure>
+											<img src="images/woman.jpeg" alt="user">
+										</figure>
+										<blockquote>
+											<p>“Bubolina ist eine junge Frau, die in der kroatischen Hauptstadt geboren und aufgewachsen ist. Sie is Psychologe von Beruf, Ökologe in der Seele. Bubolina liebt die unberührte Natur und das Meer.”</p>
+										</blockquote>
+										<span>Bubolina Marčinović, Ihr Gastgeberin </span>
+										<p> <img src="images/Croatia.png" alt=""> <img src="images/Italy.png" alt=""> <img src="images/United-Kingdom.png" alt=""></p>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="fh5co-testimonial text-center animate-box">
+										<figure>
+											<img src="images/woman1.jpeg" alt="user">
+										</figure>
+										<blockquote>
+											<p>“Dragica ist Bubićs Mutter, die Hauptköchin der Familie. Zusammen mit seinen Gourmetgerichten werden Sie der Geschmack der echten adriatischen Küche erleben.”</p>
+										</blockquote>
+										<span>Dragica Bubolinović, Ihre Gastgeberin</span>
+										<p> <img src="images/Croatia.png" alt=""> <img src="images/Italy.png" alt=""> <img src="images/United-Kingdom.png" alt=""></p>
+									</div>
+								</div>
+							</div>
+						</div> <br><br><br><br>
+					</div>
+
+					<!-- ##### Google Maps start ##### -->
+					<div id="googleMaps" class="row">
+						<div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
+							<br><br><br><br>
+							<h3>Wo wir sind</h3>
+							<p>Finden Sie uns <img src="images/smiley_icon.png" alt=""> </p>
+						</div> 
+					</div>
+
+					<!--####### Google Maps end #####-->
+
+					<div id="map" class="fh5co-map"></div>
+
+			<!-- fh5co-content-section -->
+
+					<div id="fh5co-contact" class="animate-box">
+						<div class="container">
+							<form action="#">
+								<div class="row">
+									<div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
+									<h3>Nehmen Sie Kontakt mit uns</h3>
+									<p>Für alle Fragen stehen wir Ihnen gerne zur Verfügung. </p>
+								</div>
+									<div class="col-md-6">
+										<h3 class="section-title">Unsere Adresse</h3>
+										<!--<p>Daleko daleko od gradskog betona, iza planina, na lijepom našem Jadranu.</p>-->
+										<ul class="contact-info">
+											<li><i class="icon-location-pin"></i>Aleja Slatina 11,  51417 Mošćenička Draga, Kroatien</li>
+											<li><i class="icon-phone2"></i>+ 123 4567 89</li>
+											<li><i class="icon-mail"></i><a href="#">info@bubic&bubolina.hr</a></li>
+											<li><i class="icon-globe2"></i><a href="#">www.b&bapart.hr</a></li>
+										</ul>
+									</div>
+									<div class="col-md-6">
+										<div class="row">
+											<div class="col-md-6">
+												<div class="form-group">
+													<input type="text" class="form-control" placeholder="Name" required> <!--required bedeutet "Füllen Sie dieses Feld aus".-->
+												</div>
+											</div>
+											<div class="col-md-6">
+												<div class="form-group">
+													<input type="email" class="form-control" placeholder="Email" required>
+												</div>
+											</div>
+											<div class="col-md-12">
+												<div class="form-group">
+													<input type="file" name="img" multiple>
+												</div>
+											</div>
+											<div class="col-md-12">
+												<div class="form-group">
+													<textarea name="" class="form-control" id="" cols="30" rows="7" placeholder="Message" required></textarea>
+												</div>
+											</div>
+											<div class="col-md-12">
+												<div class="form-group">
+													<input type="submit" value="Send Message" class="flatbutton1" class="btn btn-primary">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<!-- END fh5co-contact -->
+
+
+
+		
+					<!-- fh5co-blog-section -->
+					<footer>
+						<div id="footer">
+							<div class="container">
+								<div class="row">
+									<div class="col-md-6 col-md-offset-3 text-center">
+										<p class="fh5co-social-icons">
+											<a href="#"><i class="icon-twitter2"></i></a>
+											<a href="#"><i class="icon-facebook2"></i></a>
+											<a href="#"><i class="icon-instagram"></i></a>
+											<a href="#"><i class="icon-dribbble2"></i></a>
+											<a href="#"><i class="icon-youtube"></i></a>
+										</p>
+										<p>Copyright 2018 Free Html5 <a href="#">Pentagon</a>. All Rights Reserved. <br>Made with <i class="icon-heart3"></i> by <a href="http://freehtml5.co/" target="_blank">Freehtml5.co</a> / Demo Images: <a href="https://unsplash.com/" target="_blank">Unsplash</a></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</footer>
+	
+
+				</div>
+				<!-- END fh5co-page -->
+
+			</div>
+			<!-- END fh5co-wrapper -->
+
+	<!-- jQuery -->
+
+
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Stellar -->
+	<script src="js/jquery.stellar.min.js"></script>
+	<!-- Superfish -->
+	<script src="js/hoverIntent.js"></script>
+	<script src="js/superfish.js"></script>
+
+	<!-- Main JS -->
+	<script src="js/main.js"></script>
+
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script>
+	<script src="js/google_map.js"></script>
+
+	<!--time clock-->
+	<script>
+		var myVar = setInterval(myTimer, 1000);
+
+		function myTimer() {
+		    var d = new Date();
+		    document.getElementById("clock").innerHTML = d.toLocaleTimeString();
+		}
+	</script>
+
+
+<!--#####  first BUTTON "slike apartmana" start #####
+##############################################-->
+	
+	
+					  <!-- Modal -->
+					<div class="modal fade" id="myModal" role="dialog">
+					    <div class="modal-dialog modal-lg">
+					    
+					      <!-- Modal content-->
+					        <div class="modal-content">
+					            <div class="modal-header">
+					            <button type="button"  class="open" data-dismiss="modal">&times;</button>
+					            <h4 class="modal-title">Ferienwohnung Bubić</h4>
+					        </div>
+ 
+			                <div class="modal-body">
+
+								<img id="imgFullSize" class="img-thumbnail" width="500" height="350" src="images/apartmanBubolina.jpeg" alt="">
+					          <!--fullSize-->
+							<div id="myOverlay" class="overlay">
+					  			<span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+					  		</div>
+
+
+							<a class="openBtn" onclick="openSearch()"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE8nT85t9LCL10SmXbngYZK6Bj50JHpP2efpeZSMVpYhF5d5LMGQ" alt=""></a>
+
+							<script>
+								function openSearch() {
+								    document.getElementById("myOverlay").style.display = "block";
+								}
+
+								function closeSearch() {
+								    document.getElementById("myOverlay").style.display = "none";
+								}
+							</script>
+
+
+
+					          <!--fullSize ende-->
+					        <img id="imgFullSize" class="img-thumbnail" src="images/apartmanBubolina.jpeg" alt="">
+					        <img id="imgFullSize" class="img-rounded" src="images/apartmanBubolina.jpeg" alt="">
+					        <img id="imgFullSize" class="img-thumbnail" src="images/apartmanBubolina.jpeg" alt="">
+					        <img id="imgFullSize" class="img-thumbnail" src="images/apartmanBubolina.jpeg" alt="">
+					        <img id="imgFullSize" class="img-thumbnail" src="images/apartmanBubolina.jpeg" alt="">
+
+					    </div>
+				        <div class="modal-footer">
+				          	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				        </div>
+				     </div>
+				</div>
+			</div>
+		</div>
+<!-- first BUTTON "slike apartmana" ende-->
+
+
+<!-- #####  second BUTTON "slike apartmana" start #####
+##############################################-->
+
+					<div class="modal fade" id="myModal1" role="dialog">
+					    <div class="modal-dialog modal-lg">
+					    
+					      <!-- Modal content-->
+					        <div class="modal-content">
+					        	<div class="modal-header">
+					          		<button type="button" class="open" data-dismiss="modal">&times;</button> 
+					          		<h4 class="modal-title">Apartman Bubolina</h4>
+					        	</div>
+					        <div class="modal-body">
+					            <img id="imgFullSize" class="img-thumbnail" width="500" height="350" src="images/apartmanBubolina.jpeg" alt="">
+					          <!--fullSize-->
+							<div id="myOverlay" class="overlay">
+					  			<span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+					  		</div>
+
+
+							<a class="openBtn" onclick="openSearch()"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE8nT85t9LCL10SmXbngYZK6Bj50JHpP2efpeZSMVpYhF5d5LMGQ" alt=""></a>
+
+							<script>
+								function openSearch() {
+								    document.getElementById("myOverlay").style.display = "block";
+								}
+
+								function closeSearch() {
+								    document.getElementById("myOverlay").style.display = "none";
+								}
+							</script>
+
+
+
+					          <!--fullSize ende-->
+					        <img id="imgFullSize" class="img-thumbnail" src="images/apartmanBubolina.jpeg" alt="">
+					        <img id="imgFullSize" class="img-rounded" src="images/apartmanBubolina.jpeg" alt="">
+					        <img id="imgFullSize" class="img-thumbnail" src="images/apartmanBubolina.jpeg" alt="">
+					        <img id="imgFullSize" class="img-thumbnail" src="images/apartmanBubolina.jpeg" alt="">
+					        <img id="imgFullSize" class="img-thumbnail" src="images/apartmanBubolina.jpeg" alt="">
+					    </div>
+
+					    <div class="modal-footer">
+					        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					    </div>
+					</div>
+<!-- #####  second BUTTON "slike apartmana" start #####
+##############################################-->
+
+				</div>
+			</div>  
+		</div>
+
+	</body>
+</html>
+
